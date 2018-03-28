@@ -1,0 +1,14 @@
+lib/fr/inria/caml/camljava/*.class
+lib/*.a
+lib/*.cma
+lib/*.cmi
+lib/*.cmo
+lib/*.cmx
+lib/*.cmxa
+lib/*.o
+lib/jni.ml
+test/Test.class
+test/Testcb.class
+test/jnitest
+test/*.cmi
+test/*.cmo
