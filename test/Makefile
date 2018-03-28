@@ -1,20 +1,21 @@
 include ../Makefile.config
 
-CAMLJAVA=`ocamlc -where`/camljava/camljava.jar
+JAVAFILES = Test.java Testcb.java
+CLASSFILES = $(JAVAFILES:.java=.class)
 
-all: jnitest Test.class Testcb.class
-	CLASSPATH=. ./jnitest
+all: jnitest $(CLASSFILES)
+	CLASSPATH=../lib:. ./jnitest
 
 jnitest: jnitest.ml
-	ocamlc -ccopt -g -o jnitest -I +camljava jni.cma jnitest.ml
+	ocamlc -ccopt -g -o jnitest -I ../lib jni.cma jnitest.ml
 
 clean::
 	rm -f jnitest
 
 .SUFFIXES: .java .class
 
-.java.class:
-	$(JAVAC) -classpath $(CAMLJAVA):. $*.java
+$(CLASSFILES):
+	$(JAVAC) -classpath ../lib:. $(JAVAFILES)
 
 clean::
 	rm -f *.cm?
