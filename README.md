@@ -1,13 +1,16 @@
-                  CamlJava - an OCaml/Java interface
-                  ==================================
+CamlJava - an OCaml/Java interface
+==================================
 
-DESCRIPTION:
+DESCRIPTION
+-----------
 
 This is a very preliminary release of CamlJava, an OCaml/Java
 interface based on the following schema:
 
+```
          Caml/C interface       JNI (Java Native Interface)
   Caml <------------------> C <-----------------------------> Java
+```
 
 Currently, CamlJava provides a low-level, weakly-typed OCaml interface 
 very similar to the JNI.  Java object references are mapped to an
@@ -22,14 +25,16 @@ This raises fairly delicate type mapping issues, though, so don't hold
 your breath.
 
 
-REQUIREMENTS:
+REQUIREMENTS
+------------
 
 - This release of CamlJava requires Objective Caml version 3.08 or later.
 
 - A Java implementation that supports JNI (Java Native Interface).
   So far, only Sun's JDK has been tested.
 
-INSTALLATION ON A UNIX PLATFORM:
+INSTALLATION ON A UNIX PLATFORM
+-------------------------------
 
 - Edit Makefile.config to define parameters depending on your Java
   installation.  As distributed, the library is set up for
@@ -42,8 +47,8 @@ INSTALLATION ON A UNIX PLATFORM:
 - For testing:
   make tst
 
-
-INSTALLATION ON A WINDOWS PLATFORM:
+INSTALLATION ON A WINDOWS PLATFORM
+----------------------------------
 
 - Works with the MSVC port of OCaml for Windows.  
   GNU make and Cygwin tools are required to do the installation.
@@ -58,7 +63,8 @@ INSTALLATION ON A WINDOWS PLATFORM:
   make -f Makefile.msvc tst
 
 
-USAGE:
+USAGE
+-----
 
 The module is named "Jni".  A good knowledge of the JNI is assumed; see Sun's
 JNI book or http://java.sun.com/products/jdk/1.2/docs/guide/jni/
@@ -70,10 +76,16 @@ Usage:          ocamlc -I +camljava jni.cma ...
 See the programs in test/ for examples of use.
 
 
-LICENSE:  GNU Library General Public License version 2.
+LICENSE
+-------
+
+GNU Library General Public License version 2.
 
 
-FEEDBACK:  e-mail the author, Xavier.Leroy@inria.fr.
+FEEDBACK
+--------
+
+e-mail the author, Xavier.Leroy@inria.fr.
 
 
 
