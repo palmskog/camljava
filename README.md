@@ -36,16 +36,18 @@ REQUIREMENTS
 INSTALLATION ON A UNIX PLATFORM
 -------------------------------
 
-- Edit Makefile.config to define parameters depending on your Java
+- Edit `Makefile.config` to define parameters depending on your Java
   installation.  As distributed, the library is set up for
   Sun's JDK version 1.4.1 on a Linux x86 platform.
 
-- make
-  become superuser
-  make install
+```
+make
+make install
+```
 
-- For testing:
-  make tst
+For testing:
+
+`make tst`
 
 INSTALLATION ON A WINDOWS PLATFORM
 ----------------------------------
@@ -66,15 +68,16 @@ INSTALLATION ON A WINDOWS PLATFORM
 USAGE
 -----
 
-The module is named "Jni".  A good knowledge of the JNI is assumed; see Sun's
+The OCaml module is named "Jni". A good knowledge of the JNI is assumed; see Sun's
 JNI book or http://java.sun.com/products/jdk/1.2/docs/guide/jni/
-Then, the comments in lib/jni.mli should make sense.
+Then, the comments in `lib/jni.mli` should make sense.
 
-Usage:          ocamlc -I +camljava jni.cma ...
-            or  ocamlopt -I +camljava jni.cmxa ...
+Usage:
+`ocamlc -I +camljava jni.cma ...`
+or
+`ocamlopt -I +camljava jni.cmxa ...`
 
-See the programs in test/ for examples of use.
-
+See the programs in the `test` directory for examples of use.
 
 LICENSE
 -------
