@@ -7,6 +7,7 @@ lib/*.cmx
 lib/*.cmxa
 lib/*.o
 lib/jni.ml
+lib/camljava.jar
 test/Test.class
 test/Testcb.class
 test/jnitest
